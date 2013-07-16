@@ -1,0 +1,6 @@
+// éclair - FIXME: Need this so file is recognised as utf-8. Need a better solution than this bodge
+// FIXME: In the end, this should only contain information drawn from the Excel Model.
+// that is constant across pathways. The methods called are in helper.rb
+window.twentyfifty = {};
+window.twentyfifty.default_pathway = <%= ("1" * structure.types.size).to_json %>;
+window.twentyfifty.choice_sizes = <%= choice_sizes.to_json %>;

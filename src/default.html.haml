@@ -1,0 +1,55 @@
+!!!
+%html
+  %head
+    %title Belgian 2050 Pathways Calculator
+    = stylesheet
+    = javascript
+  %body
+    #topbar
+      #help
+        %a#helpLink{ :href => ''} Help
+      %ul#viewdropdown.dropdown
+        %li
+          %a{ href:'#', onclick:"$('ul#view_choices').toggle()"} 
+            See implications
+            %img{src: '/assets/images/dropdown-arrow.png'}
+          %ul#view_choices.choices
+            - view_names.each do |action,title|
+              %li
+                %a{href:'#', onclick:"twentyfifty.switchView('#{action}')"}= title 
+
+      #messages
+        #calculating Calculating
+        #message
+          %a{href:""} This is an ALPHA version of the Belgian 2050 Pathways Calculator
+      %ul#savedpathwaydropdown.dropdown
+        %li
+          %a{href:'#', onclick:"$('ul#savedpathway_choices').toggle()"}
+            Example Pathways
+            %img{src: '/assets/images/dropdown-arrow.png'}
+          %ul#savedpathway_choices.choices
+            - saved_pathways.each do |name,code|
+              %li
+                %a{href:"#", onclick:"twentyfifty.switchPathway('#{code}');$('ul#savedpathway_choices').toggle()"}= name
+      #share
+        %a{href:'#', onclick:"twentyfifty.switchView('share')"} Share
+    #results
+    #classic_controls
+      #demand
+        %table
+          - structure.demand_choices.each do |choice|
+            = classic_table_row_for_choice choice
+      #supply
+        %table
+          - structure.supply_choices.each do |choice|
+            = classic_table_row_for_choice choice
+      #other
+        %table
+          = classic_table_row_for_choice structure.geosequestration_choice
+
+        %table
+          = classic_table_row_for_choice structure.balancing_choice
+    #tooltip
+    #footer
+      Based on <a href='http://2050-calculator-tool-wiki.decc.gov.uk/pages/140'>excel #{ModelStructure.instance.reported_calculator_version.to_s.downcase}</a>. The source code for this site is available under an open source licence from 
+      %a{href: "http://github.com/decc/twenty-fifty"}http://github.com/decc/twenty-fifty
