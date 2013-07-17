@@ -27,7 +27,7 @@ class PrimaryEnergy
         renderTo: 'emissions_chart'
         events:
           load: () ->
-            @renderer.text("Targets" ,60,170).css({color: '#fff',fill: '#fff', 'font-size': '0.75em'}).attr({zIndex:10}).add()
+            @renderer.text("Targets" ,380,170).css({fill: '#fff', 'font-size': '0.8em'}).attr({zIndex:10, transform:'rotate(13 380 170)'}).add()
       },
       title: { text: 'Belgian greenhouse gas emissions' },
       subtitle: { text: "MtCO<sub>2</sub>e/yr"},
@@ -67,7 +67,7 @@ class PrimaryEnergy
     i++
 
     # Net emissions line
-    data = @pathway['ghg']["Total"]
+    data = @pathway['ghg']["Total net of biomass excl. Int'l aviation"]
     if @emissions_chart.series[i]?
       @emissions_chart.series[i].setData(data,false)
     else
