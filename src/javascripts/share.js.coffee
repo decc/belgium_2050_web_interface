@@ -16,20 +16,6 @@ shareHTML = """
       </p>
       <p>* On modern browsers, this url is the same as the one you will see in the address bar as you use the calculator. On older browsers, such as Internet Explorer 6 and 7, it will not be.</p>
     </div>
-    <div id='excel'>
-      <h1>Sharing this pathway with the excel version of the 2050 pathways calculator</h1>
-      <p>
-        You may want to explore your pathway in more detail, taking a look at all the assumptions behind our modelling, by downloading
-        <a href="http://www.decc.gov.uk/2050">the underlying excel spreadsheet.</a>
-      </p>
-      <p>
-        If you do, then you can recreate the pathway you have chosen in this tool by copying the numbers from the box below and pasting them in cells E5 to E57 on the 'Control' sheet of the workbook. You can also copy a pathway from that range in the excel model, paste it in the box below and click the 'Go to this pathway' button at the bottom of the page.
-        <form>
-          <textarea></textarea>
-          <input onclick="twentyfifty.loadFromExcel();" type="button" value="Go to this pathway" />
-        </form>
-      </p>
-    </div>
   </div>
 """
 
