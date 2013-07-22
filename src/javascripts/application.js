@@ -25,7 +25,10 @@
 
 // Now the individual views
 //= require primary_energy
-// #= require electricity
+//= require electricity
+//= require simple_costs
+
+// Not in use
 // #= require energy_security
 // #= require map
 // #= require sankey_display

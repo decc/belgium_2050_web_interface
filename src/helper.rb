@@ -31,8 +31,9 @@ module Helper
 
   def view_names
     { 
-      "primary_energy_chart"=>"All energy",
-      "electricity"=>"Electricity",
+      "primary_energy_chart" => "All energy",
+      "electricity" => "Electricity",
+      "simple_costs" => "Costs",
       #"energy_security" => "Energy security",
       #"sankey"=>"Energy flows", 
       #"map"=>"Area", 
