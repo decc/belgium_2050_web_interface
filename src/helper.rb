@@ -60,7 +60,7 @@ module Helper
   end
 
   def example_pathways
-    @example_pathways ||= {} # ModelStructure.instance.example_pathways
+    @example_pathways ||= ModelStructure.instance.example_pathways
   end 
 
   def pathway_names
@@ -68,7 +68,7 @@ module Helper
   end
 
   def pathway_wiki_pages
-    Hash[*example_pathways.map { |e| [e[:code],e[:wiki]] }.flatten]
+    {} # Hash[*example_pathways.map { |e| [e[:code],e[:wiki]] }.flatten]
   end
 
   def cost_comparator_pathways
@@ -86,12 +86,11 @@ module Helper
   end
 
   def pathway_descriptions
-    Hash[*example_pathways.map { |e| [e[:code],e[:description]] }.flatten]
+    {} # Hash[*example_pathways.map { |e| [e[:code],e[:description]] }.flatten]
   end
 
   def saved_pathways 
-    # Hash[*example_pathways.map { |e| [e[:name],e[:code]] }.flatten]
-    {}
+    Hash[*example_pathways.map { |e| [e[:name],e[:code]] }.flatten]
   end
 
   def choice_sizes
