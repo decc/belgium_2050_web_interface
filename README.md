@@ -1,12 +1,9 @@
-# DECC 2050 CALCULATOR TOOL
+# BELGIUM 2050 CALCULATOR TOOL
 
-A web interface to the www.decc.gov.uk 2050 energy and climate change calculator
-
-Further detail on the project:
-http://www.decc.gov.uk/2050
+A web interface to the Belgian vesion of the 2050 Calculator
 
 Canonical source:
-http://github.com/decc/twenty-fifty
+http://github.com/decc/belgium_2050_web_interface
 
 # INSTALATION
 

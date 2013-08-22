@@ -7,9 +7,9 @@
 # If you don't specify a branch it use the master branch
 # If you don't specify a repository it will use git://github.com/decc/twenty-fifty.git
 
-hostname = ARGV[0] || "2050-calculator-tool.decc.gov.uk"
+hostname = ARGV[0] || "http://belgium.2050calculator.net"
 branch = ARGV[1] || "master"
-repository = ARGV[2] || "git://github.com/decc/twenty-fifty.git"
+repository = ARGV[2] || "git://github.com/decc/belgium_2050_web_interface"
 folder = repository[/\/([^\/]*?)\.git/,1]
 passenger_version = '3.0.12' # This is the version of mod_rails, aka passenger to use.
 
