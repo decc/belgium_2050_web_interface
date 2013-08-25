@@ -32,10 +32,10 @@ module Helper
   def view_names
     { 
       "primary_energy_chart" => "All energy",
+      "sankey"=>"Energy flows", 
       "electricity" => "Electricity",
       "simple_costs" => "Costs",
       #"energy_security" => "Energy security",
-      #"sankey"=>"Energy flows", 
       #"map"=>"Area", 
       #"story"=>"Story",
       #"air_quality" => "Air quality",

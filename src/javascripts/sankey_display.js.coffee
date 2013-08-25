@@ -181,7 +181,7 @@ class SankeyDisplay
       @recolour(@boxes["District heating"].left_lines,"#FF0000")
       @recolour(@boxes["Electricity grid"].left_lines,"#0000FF")
     
-    pixels_per_TWh = $('#sankey').height() / 6000
+    pixels_per_TWh = $('#sankey').height() / 3000
 
     @s.y_space = Math.round(100 * pixels_per_TWh)
     @s.right_margin = 250
