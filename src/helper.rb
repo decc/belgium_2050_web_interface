@@ -31,17 +31,18 @@ module Helper
 
   def view_names
     { 
+      "emissions" => "Greenhouse Gases",
       "primary_energy_chart" => "All energy",
+      "story"=>"Story",
       "sankey"=>"Energy flows", 
       "electricity" => "Electricity",
+      "energy_security" => "Energy security",
       "simple_costs" => "Costs",
-      #"energy_security" => "Energy security",
-      #"map"=>"Area", 
-      #"story"=>"Story",
       #"air_quality" => "Air quality",
-      #"costs_in_context"=>"Costs in context",
-      #"costs_compared_overview"=>"Costs compared",
-      #"costs_sensitivity" => "Cost sensitivity"
+      "costs_in_context"=>"Costs in context",
+      "costs_compared_overview"=>"Costs compared",
+      "costs_sensitivity" => "Cost sensitivity",
+      "map"=>"Area"
     }
   end
 

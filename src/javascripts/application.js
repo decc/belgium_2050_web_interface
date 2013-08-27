@@ -24,20 +24,21 @@
 //= require costs_common_methods
 
 // Now the individual views
+//= require emissions
 //= require primary_energy
 //= require electricity
 //= require simple_costs
 
 // Not in use
-// #= require energy_security
-// #= require map
-// #= require sankey_display
+// = require energy_security
+// = require map
+// = require sankey_display
 // #= require air_quality
-// #= require costs_in_context
-// #= require costs_compared_overview
-// #= require costs_compared_within_sector
-// #= require costs_sensitivity
-// #= require story
+// = require costs_in_context
+// = require costs_compared_overview
+// = require costs_compared_within_sector
+// = require costs_sensitivity
+// = require story
 // #= require simple_sankey
-// #= require share
+// = require share
 

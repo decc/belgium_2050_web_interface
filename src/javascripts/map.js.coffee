@@ -48,7 +48,7 @@ class Map
   colours = {
      'III.a.2': '#ff0000'
      'III.a.1': '#ff0000'
-     'IV.c': '#aa0000'  
+     'IV.c': '#aa0000'
      'VI.a.Biocrop': '#00ff00'
      'VI.a.Forestry': '#408000'
      'VI.c': '#00ff00'
@@ -70,9 +70,9 @@ class Map
    labels = {
      'III.a.2': 'Offshore wind'
      'III.a.1': 'Onshore wind'
-     'IV.c': 'Micro wind'  
+     'IV.c': 'Micro wind'
      'VI.a.Biocrop': 'Energy crops'
-     'VI.a.Forestry': 'Forest'  
+     'VI.a.Forestry': 'Area of biocrop and forest assuming 0,6W/m² productivity'
      'VI.c': 'Marine algae'
      'V.b': 'Biocrops'
      'IV.a': 'Solar PV'
@@ -81,12 +81,12 @@ class Map
      'III.b': 'Hydro'
      'III.c.TidalRange': 'Tidal range'
      'III.c.TidalStream': 'Tidal stream'
-     'I.a': '2 GW coal gas or biomass power stations without CCS'
-     'I.b': '1.2 GW coal gas or biomass power stations with CCS'
-     'II.a': '3 GW nuclear power station'
+     'I.a': '0.6 GW CCS thermal stations'
+     'I.b': '0.6 GW CCS power stations'
+     'II.a': '1 GW nuclear power station'
      'III.d': '0.01 GW geothermal stations'
-     'VII.c': '1 GW gas standby power stations'
-     'VI.b': '215 kt/y waste to energy conversion facilities'
+     'VII.c': '1 GW gas standby generators'
+     'VI.b': 'Number of MSW, C&I and CDW to energy facilities'
    }
    
    pointSizes = {
@@ -123,7 +123,7 @@ class Map
      
      @land_boxes = {}
      
-     for name in ['III.a.1','III.b','IV.a','IV.b','IV.c','VI.a.Biocrop','VI.a.Forestry']
+     for name in ['III.a.1','III.b','IV.a','IV.b','IV.c','VI.a.Forestry']
        @land_boxes[name] = r.up_labeled_square(x,y,labels[name],0,colours[name])
      
      x = (map_width/2) + map_offset_x + 250
@@ -143,7 +143,7 @@ class Map
      
      @overseas_land_boxes = {}
      
-     for name in ['V.b','VII.a']
+     for name in ['V.b']
        @overseas_land_boxes[name] = r.up_labeled_square(x,y,labels[name],0,colours[name])
        
      @points = r.set()
@@ -174,6 +174,7 @@ class Map
     @ready = false
 
    updateResults: (data) ->
+     window.pathway = data
      # Setup
      @setup() unless @ready
      map = data.map
