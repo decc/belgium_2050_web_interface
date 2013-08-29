@@ -12,7 +12,7 @@ gem 'coffee-script'
 
 # Model
 gem 'ffi'
-gem 'belgium_2050_model', '0.0.2pre'
+gem 'belgium_2050_model', '0.0.3'
 
 # Development
 group :development do

@@ -236,6 +236,7 @@ pathwayDescriptions = (pathway_code,default_description = null) ->
   window.twentyfifty.pathway_descriptions_hash[pathway_code] || default_description
 
 pathwayWikiPages = (pathway_code,default_page = null) ->
+  return default_page
   "http://2050-calculator-tool-wiki.decc.gov.uk/pages/#{window.twentyfifty.pathway_wiki_pages_hash[pathway_code] || default_page}"
 
 window.twentyfifty.code = codeForChoices

@@ -169,12 +169,12 @@ class CostsInContext
     
     bar.overlay.attr({width: @x(total_cost+total_range) - @x(0)})
     
-    if pathway.ghg['Total'][8] > 166
-      bar.message.attr({x:@x(total_cost+total_range)+100,text:"This pathway does not reduce emissions by at least 80% on 1990 levels"})
-      bar.message.toFront()
-    else
-      bar.message.attr({x:@x(total_cost+total_range)+100,text:""})
-      bar.message.toFront()
+    #if pathway.ghg['Total'][8] > 166
+    #  bar.message.attr({x:@x(total_cost+total_range)+100,text:"This pathway does not reduce emissions by at least 80% on 1990 levels"})
+    #  bar.message.toFront()
+    #else
+    bar.message.attr({x:@x(total_cost+total_range)+100,text:""})
+    bar.message.toFront()
   
   setIncrementalCostLabel: (code,pathway) ->
     return false unless @comparator?

@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    belgium_2050_model (0.0.2pre)
+    belgium_2050_model (0.0.3)
       ffi (>= 1.0.11)
     coffee-script (2.2.0)
       coffee-script-source
@@ -38,7 +38,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  belgium_2050_model (= 0.0.2pre)
+  belgium_2050_model (= 0.0.3)
   coffee-script
   ffi
   haml

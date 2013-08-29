@@ -74,13 +74,14 @@ module Helper
   end
 
   def cost_comparator_pathways
-    example_pathways.find_all do |e|
-      e[:cost_comparator]
-    end.sort_by do |e|
-      e[:cost_comparator]
-    end.map do |e|
-      e[:code]
-    end
+    #example_pathways.find_all do |e|
+    #  e[:cost_comparator]
+    #end.sort_by do |e|
+    #  e[:cost_comparator]
+    #end.map do |e|
+    #  e[:code]
+    #end
+    example_pathways.map { |e| e[:code] }
   end
 
   def default_cost_comparator_pathway

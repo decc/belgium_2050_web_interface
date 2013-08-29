@@ -29,11 +29,11 @@ class Map
   display_width = 1200
   display_height = 800
 
-  map_image_url = '/assets/images/uk.png'
-  map_width = 492
-  map_height = 725
-  map_offset_x = 150
-  map_offset_y = 0
+  map_image_url = '/assets/images/belgium.jpg'
+  map_width = 700
+  map_height = 597
+  map_offset_x = 0
+  map_offset_y = 20
 
   km = 0.69 # Pixels per km for coloured areas on map
   m = km / 1000.0
