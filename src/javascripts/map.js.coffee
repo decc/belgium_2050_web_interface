@@ -35,7 +35,7 @@ class Map
   map_offset_x = 0
   map_offset_y = 20
 
-  km = 0.69 # Pixels per km for coloured areas on map
+  km = 228.0/492.0 # Pixels per km for coloured areas on map
   m = km / 1000.0
   m2 = m * m
   ha = 10000 * m2
@@ -118,16 +118,16 @@ class Map
      @wave = {line: r.path([]).attr({stroke: 'blue', 'stroke-width': 2}), label: r.text(98,34,"Wave").attr({'text-anchor':'end'})}
      @wave.label.hide()
      
-     x = (map_width/2) + map_offset_x
-     y = map_height + map_offset_y - 100
+     x = (map_width/2) + map_offset_x + 125
+     y = map_height + map_offset_y - 200
      
      @land_boxes = {}
      
      for name in ['III.a.1','III.b','IV.a','IV.b','IV.c','VI.a.Forestry']
        @land_boxes[name] = r.up_labeled_square(x,y,labels[name],0,colours[name])
      
-     x = (map_width/2) + map_offset_x + 250
-     y = 30
+     x = map_offset_x + 30
+     y = 60
      
      @sea_boxes = {}
      
@@ -138,8 +138,8 @@ class Map
      r.text(44,510,"Imports").attr({'fill':'#ccc','font-weight':'bold','text-anchor':'start'})
      
      
-     x = map_offset_x - 105
-     y = map_height + map_offset_y - 30
+     x = map_offset_x + 120
+     y = map_height + map_offset_y
      
      @overseas_land_boxes = {}
      
@@ -153,7 +153,7 @@ class Map
    point_stack: (x,y,number,colour,label,size) ->
      x_count = 0
      if size < 10
-       x_step = 5 
+       x_step = 5
        y_step = 5
      else
        x_step = 1.5*size
@@ -162,7 +162,7 @@ class Map
      @r.text(x-20,y,label).attr({'text-anchor':'end'}) if number > 0
      for i in [1..number]
        @r.circle(x+(x_count*x_step),y,size*km).attr({'stroke-width':0,'fill':colour})
-       @r.circle(x+(x_count*x_step),y,1).attr({'stroke-width':0,'fill':'black'})  
+       @r.circle(x+(x_count*x_step),y,1).attr({'stroke-width':0,'fill':'black'})
        x_count = x_count + 1
        if (x_count*x_step) > width
          x_count = 0
@@ -202,7 +202,7 @@ class Map
        y = y - side - 5
        
      # Sea areas
-     x = (map_width/2) + map_offset_x + 250
+     x = map_offset_x + 30
      y = 30
      values = []
      for name, box of @sea_boxes
@@ -220,7 +220,7 @@ class Map
        y = y + side + 5
      
       # Overseas land areas
-      y = map_height + map_offset_y - 30
+      y = map_height + map_offset_y + 60
       values = []
       for name, box of @overseas_land_boxes
         values.push({name: name, value: map[name]})
